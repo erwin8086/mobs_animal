@@ -129,6 +129,7 @@ minetest.register_craftitem(":mobs:bucket_milk", {
 	inventory_image = "mobs_bucket_milk.png",
 	stack_max = 1,
 	on_use = minetest.item_eat(8, 'bucket:bucket_empty'),
+	spoil=4,
 })
 
 -- cheese wedge
@@ -136,6 +137,7 @@ minetest.register_craftitem(":mobs:cheese", {
 	description = S("Cheese"),
 	inventory_image = "mobs_cheese.png",
 	on_use = minetest.item_eat(4),
+	spoil=20,
 })
 
 minetest.register_craft({
@@ -152,7 +154,8 @@ minetest.register_node(":mobs:cheeseblock", {
 	tiles = {"mobs_cheeseblock.png"},
 	is_ground_content = false,
 	groups = {crumbly = 3},
-	sounds = default.node_sound_dirt_defaults()
+	sounds = default.node_sound_dirt_defaults(),
+	spoil=20,
 })
 
 minetest.register_craft({

@@ -243,7 +243,8 @@ minetest.register_node(":mobs:egg", {
 			minetest.set_node(pos, {name = "mobs:egg", param2 = 1})
 		end
 	end,
-	on_use = mobs_shoot_egg
+	on_use = mobs_shoot_egg,
+	spoil=8,
 })
 
 
@@ -252,6 +253,7 @@ minetest.register_craftitem(":mobs:chicken_egg_fried", {
 	description = S("Fried Egg"),
 	inventory_image = "mobs_chicken_egg_fried.png",
 	on_use = minetest.item_eat(2),
+	spoil=2,
 })
 
 minetest.register_craft({
@@ -265,6 +267,7 @@ minetest.register_craftitem(":mobs:chicken_raw", {
 description = S("Raw Chicken"),
 	inventory_image = "mobs_chicken_raw.png",
 	on_use = minetest.item_eat(2),
+	spoil=3,
 })
 
 -- cooked chicken
@@ -272,6 +275,7 @@ minetest.register_craftitem(":mobs:chicken_cooked", {
 description = S("Cooked Chicken"),
 	inventory_image = "mobs_chicken_cooked.png",
 	on_use = minetest.item_eat(6),
+	spoil=3,
 })
 
 minetest.register_craft({

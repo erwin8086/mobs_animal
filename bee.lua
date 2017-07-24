@@ -125,6 +125,10 @@ minetest.register_node(":mobs:beehive", {
 
 })
 
+spoil.register_inv("mobs:beehive", {"beehive"})
+
+
+
 minetest.register_craft({
 	output = "mobs:beehive",
 	recipe = {

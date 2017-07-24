@@ -84,6 +84,7 @@ minetest.register_craftitem(":mobs:pork_raw", {
 	description = S("Raw Porkchop"),
 	inventory_image = "mobs_pork_raw.png",
 	on_use = minetest.item_eat(4),
+	spoil=3,
 })
 
 -- cooked porkchop
@@ -91,6 +92,7 @@ minetest.register_craftitem(":mobs:pork_cooked", {
 	description = S("Cooked Porkchop"),
 	inventory_image = "mobs_pork_cooked.png",
 	on_use = minetest.item_eat(8),
+	spoil=3,
 })
 
 minetest.register_craft({
